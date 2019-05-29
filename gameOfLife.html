@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Game of Life</title>
+    <link rel="stylesheet" type="text/css" href="gameOfLife.css" />
+  </head>
+  <body>
+    <div class="game">
+      <div class="gameField">
+        <canvas></canvas>
+      </div>
+
+      <div class="controls">
+        <div class="controls-buttons">
+          <div class="controls-button-group">
+            <button id="startStop">Start</button>
+
+            <button id="step">Step</button>
+          </div>
+
+          <div class="controls-button-group">
+            <button id="reset">Reset</button>
+
+            <button id="killUnseen">Kill unseen cells</button>
+          </div>
+
+          <div class="controls-button-group">
+            <button id="save">Save field</button>
+
+            <div class="uploadWrapper">
+              <button>Load field</button>
+              <input id="load" type="file"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls-inputs">
+          <div class="controls-inputs-group">
+            <label for="speed">Speed</label>
+            <input id="speed" type="range" min="1" max="25"/>
+          </div>
+
+          <div class="controls-inputs-group">
+            <label for="zoom">Zoom</label>
+            <input id="zoom" type="range" min="2" max="8"/>
+          </div>
+
+          <div class="controls-inputs-group">
+            <label for="generation">Generation</label>
+            <input id="generation" type="range" min="1" max="1"/>
+          </div>
+
+          <div class="controls-inputs-group">
+            <label for="color">Cell color (hex format)</label>
+            <input id="color" type="text" placeholder="#cccccc" maxlength="7"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="gameOfLife.js"></script>
+  </body>
+</html>
